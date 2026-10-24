@@ -1,0 +1,72 @@
+
+= POS Exams Java Seed
+
+A seed project to be used for POS examinations when using
+the **Java** &trade; and **Spring** &trade; stack to
+implement the solutions.
+
+The exam project is a **Gradle multi-project** build with a
+central version catalog. The parts starting with `Aufgabe`
+are meant for you to put your solutions into.
+The parts are:
+
+|===
+| Subproject                 | Description
+
+| `Aufgabe1_ORMapping`       | Put your **Aufgabe 1** solution here.
+| `Aufgabe2_BusinessService` | Put your **Aufgabe 2** solution here.
+| `Aufgabe3_RestfulApi`      | Put your **Aufgabe 3** solution here.
+|===
+
+== First Step!
+
+Rename file `YOUR-CLASS_YOUR-NAME.txt` with your class and name!
+
+== Part 1 / Aufgabe 1
+
+Is about implementing a class
+model which is mapped into a relational
+database.
+
+Directory: [./Aufgabe1_ORMapping](./Aufgabe1_ORMapping)
+
+Build script: [Aufgabe1_ORMapping/build.gradle.kts](./Aufgabe1_ORMapping/build.gradle.kts)
+
+Project root package: `ormapping`
+
+Application class: `ormapping.ORMappingApplication`
+
+Root test class: `ormapping.ORMappingApplicationTest`<br/>
+(use additional specific classes for your tests)
+
+Mind the resulting database model.
+
+Implement tests to ensure your solution
+is correct and works.
+
+
+== Details about the project build
+
+The build is based on https://gradle.org/[Gradle]
+
+Shared build configuration:
+
+* Java 25 toolchain,
+* Spring Boot (devtools, validation),
+* JUnit Jupiter,
+* JaCoCo
+
+lives in the convention plugin [buildSrc/src/main/kotlin/POS-exam-java-conventions.gradle.kts](./buildSrc/src/main/kotlin/POS-exam-java-conventions.gradle.kts).
+Dependency versions live in [gradle/libs.versions.toml](./gradle/libs.versions.toml).
+
+=== Commands
+
+[source, shell]
+----
+# compile + test everything
+./gradlew build
+# tests for one module
+./gradlew :Aufgabe1_ORMapping:test
+# one specific test
+./gradlew :Aufgabe1_ORMapping:test --tests "ormapping.ORMappingApplicationTest"
+----

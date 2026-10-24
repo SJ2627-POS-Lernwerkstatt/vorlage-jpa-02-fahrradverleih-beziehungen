@@ -1,0 +1,25 @@
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+### Project specific
+POS_exam_java_seed.zip
+
+### Gradle
+.gradle/
+.kotlin/
+build/
