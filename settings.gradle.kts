@@ -7,6 +7,11 @@ pluginManagement {
     }
 }
 
+// Downloads JDK 25 automatically if it is not installed locally.
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
+
 dependencyResolutionManagement {
     //repositoriesMode = RepositoriesMode.PREFER_SETTINGS
     repositories {
